@@ -15,16 +15,23 @@ mongoose.connect('mongodb://localhost/cletearev-dev', {
 .then(()=> console.log('MongoDB Connected...'))
 .catch(err => console.log(err));
 
-app.get('/api/customers', (req, res) => {
-  const customers = [
-    {id: 1, firstName: 'John', lastName: 'Doe'},
-    {id: 2, firstName: 'Brad', lastName: 'Traversy'},
-    {id: 3, firstName: 'Mary', lastName: 'Swanson'},
-  ];
-
-  res.json(customers);
+app.get('/api/customers', (req, res)=> {
+	const teas = [
+		{id: 1, firstName: 'John', lastName: 'Dough'},
+		{id: 2, firstName: 'Ramona', lastName: 'Quimby'},
+		{id: 3, firstName: 'Bill', lastName: 'Bixby'},
+		{id: 4, firstName: 'Squitten', lastName: 'Good'},
+		{id: 5, firstName: 'Squitten', lastName: 'Bad'}
+	];
+	res.json(teas);
 });
 
-const port = 5000;
+// ===========Routes==================
+// require('./routes/html-routes.js')(app);
+// require('./routes/api-routes.js')(app);
 
-app.listen(port, () => console.log(`Server running on port ${port}`));
+const PORT = 5000;
+
+app.listen(PORT, () => {
+	console.log(`Server running on port ${PORT}`)
+});
