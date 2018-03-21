@@ -12,11 +12,19 @@ const toolbar = (props) => (
 		<DrawerToggle
 		clicked={props.sdOpen}>
 		</DrawerToggle>
+
+		<h2>Cleveland Tea Revival</h2>
 		
 		<nav className={classes.DesktopOnly}>
 			<NavigationItems/>
+			
+
 		</nav>
 	</header>
 	);
 
 export default toolbar;
+
+		// <nav className={classes.ToolbarTitle}>
+		// 	Cleveland Tea Revival
+		// </nav>

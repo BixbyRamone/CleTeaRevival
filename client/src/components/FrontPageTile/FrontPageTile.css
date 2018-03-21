@@ -1,0 +1,31 @@
+.FrontPageTile {
+	/*width: 23%;*/
+	display: flex;
+	flex-wrap: wrap;
+	margin: auto;
+	justify-content: center;
+}
+
+.FrontPageTile a img {  
+	height: 260px;
+	border-radius: 100%;
+	border: 5px solid #ffa566;
+	padding: 1px;
+}
+
+.FrontPageTile h3 {
+	position: relative;
+	transform: translate(0%, -800%);
+	/*width: 100%;*/
+	text-align: center;
+	/*color: rgb(242, 247, 255);*/
+	text-shadow: 0 0 5px #ffa566;
+
+}
+
+@media (max-width: 1060px) {
+	.FrontPageTile a img {
+		height: 200px;
+	}
+}
+

@@ -4,13 +4,18 @@
 	position: fixed;
 	top: 0;
 	left: 0;
-	background-color: #703b09;
+	background-color: #ffa566;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	padding: 0 20px;
 	box-sizing: border-box;
 	z-index: 90;
+}
+
+.ToolbarTitle {
+	padding-top: 6%;
+	font-size: 200%;
 }
 
 .Toolbar nav {
@@ -23,3 +28,4 @@
 		display: none;
 	}
 }
+

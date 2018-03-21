@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { NavLink } from 'react-router-dom';
+
 import classes from './NavigationItems.css';
 
 import NavigationItem from './NavigationItem/NavigationItem';
@@ -8,11 +10,13 @@ import NavigationItem from './NavigationItem/NavigationItem';
 const navigationItems = (props) => (
 		<ul className={classes.NavigationItems}>
 
-			<NavigationItem	link="/" active>Home</NavigationItem>
+			<NavLink to="/"><NavigationItem	link="/" >Home</NavigationItem></NavLink>
 
-			<NavigationItem link="/">Menu</NavigationItem>
+			<NavLink to="/menu"><NavigationItem link="/menu">Menu / Shop</NavigationItem></NavLink>
 
-			<NavigationItem link="/">Shop</NavigationItem>
+			<NavLink to="/"><NavigationItem link="/calendar">Calendar</NavigationItem></NavLink>
+
+			<NavLink to="/"><NavigationItem link="/about">Blog</NavigationItem></NavLink>		
 			
 		</ul>
 	);

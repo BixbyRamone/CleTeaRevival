@@ -1,5 +1,6 @@
 .HomePage {
 	padding-top: 60px;
+	padding-bottom: 15px;
 	width: 100%;
 }
 
@@ -9,14 +10,30 @@
 
 .HomePage a h3 {
 	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
+	/*top: 50%;*/
+	/*left: 50%;*/
+	transform: translate(0%, -200%);
 	width: 100%;
 	text-align: center;
-	color: rgb(242, 247, 255);
+	/*color: rgb(242, 247, 255);*/
 	font-size: 300%;
 	text-shadow: 0 0 5px #ffa566;
 
 }
 
+.HomePageTiles {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+@media (max-width: 730px) {
+	.HomePage a h3 {
+		transform: translate(0%, -150%);
+	}
+}
+
+@media (max-width: 450px) {
+	.HomePage a h3 {
+		transform: translate(0%, -130%);
+	}
+}
