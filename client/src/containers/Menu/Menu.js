@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 import Aux from '../../hoc/Auxiliary/Auxiliary';
 import Category from '../../components/Category/Category';
+import Checkbox from '../../components/Navigation/Toolbar/Expanded/Checkbox/Checkbox';
 
 import classes from './Menu.css';
 
@@ -58,7 +59,13 @@ class BurgerBuilder extends Component {
 
 		return (
 		<Aux>
+
+			
+
 			<div className={classes.Menu}>
+			<Checkbox 
+			teas={catArray}
+			/>
 				
 			</div>
 

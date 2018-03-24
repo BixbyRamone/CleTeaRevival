@@ -1,0 +1,16 @@
+.FooterTile {
+	list-style: none;
+	width: 250px;
+    /*padding: 16px;*/
+    display: inline-block;
+    text-align: center;
+    margin: 10px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+@media (min-width: 500px) {
+	.FooterTile {
+		width: 30%;
+	}
+}

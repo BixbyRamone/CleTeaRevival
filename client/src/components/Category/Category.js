@@ -10,7 +10,6 @@ class category extends Component {
 	}
 	
 	render() {
-		console.log(this.props);
 		let teas2Show = [];
 		for (var i = this.props.teas.length - 1; i >= 0; i--) {
 			if (this.props.teas[i].category === this.props.category) {
@@ -18,7 +17,6 @@ class category extends Component {
 			}
 		}
 
-		console.log(teas2Show);
 
 		return(
 			<Aux>

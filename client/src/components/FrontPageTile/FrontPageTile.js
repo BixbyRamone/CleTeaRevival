@@ -5,7 +5,6 @@ import Aux from '../../hoc/Auxiliary/Auxiliary';
 import classes from './FrontPageTile.css';
 
 const frontPageTile = (props)=> {
-	console.log(props);
 	return (
 		<section className={classes.FrontPageTile}>
 		<a>
