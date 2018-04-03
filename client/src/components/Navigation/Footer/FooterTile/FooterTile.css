@@ -6,7 +6,6 @@
     text-align: center;
     margin: 10px;
     box-sizing: border-box;
-    cursor: pointer;
 }
 
 @media (min-width: 500px) {

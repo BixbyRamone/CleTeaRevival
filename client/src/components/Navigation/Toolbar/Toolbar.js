@@ -24,7 +24,3 @@ const toolbar = (props) => (
 	);
 
 export default toolbar;
-
-		// <nav className={classes.ToolbarTitle}>
-		// 	Cleveland Tea Revival
-		// </nav>

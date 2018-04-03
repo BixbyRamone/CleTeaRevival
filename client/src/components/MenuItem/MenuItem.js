@@ -1,9 +1,13 @@
 import React from 'react';
 
+import classes from './MenuItem.css';
+
 const menuItem = (props)=> {
 
 	return (
-		<div>
+		<div className={classes.MenuItem}
+			 key={props.teaInfo.id}
+				>
 
 			<ul>
 				<li>

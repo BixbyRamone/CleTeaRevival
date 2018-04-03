@@ -4,6 +4,7 @@
 	flex-wrap: wrap;
 	margin: auto;
 	justify-content: center;
+	cursor: pointer;
 }
 
 .FrontPageTile a img {  

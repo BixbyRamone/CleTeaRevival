@@ -9,6 +9,8 @@ import classes from './Menu.css';
 class BurgerBuilder extends Component {
 
 	state = {
+		checked: [],
+		visablecategories: "cat",
 		teas: [
 			{
 				name: 'kukicha',
@@ -37,12 +39,116 @@ class BurgerBuilder extends Component {
 				priceCup: 2,
 				pricePot: 4,
 				priceOz: 2,
-				description: 'tasty',
+				description: 'tasty,  ipsum loremm foo goo',
 				category: 'green',
 				available: true,
 				key: 3
+			},
+
+			{
+				name: 'kukicha',
+				priceCup: 1,
+				pricePot: 2,
+				priceOz: 1,
+				description: 'green tea with seasame taste',
+				category: 'green',
+				available: true,
+				key: 4
+			},
+
+			{
+				name: 'kukicha',
+				priceCup: 1,
+				pricePot: 2,
+				priceOz: 1,
+				description: 'green tea with seasame taste',
+				category: 'green',
+				available: true,
+				key: 5
 			}
 		]
+	}
+
+	testFunction = ()=> {
+		console.log
+		this.setState({
+			teas:  [
+			{
+				name: 'earl',
+				priceCup: 1,
+				pricePot: 2,
+				priceOz: 1,
+				description: 'green tea with seasame taste',
+				category: 'green',
+				available: true,
+				key: 1
+			},
+
+			{
+				name: 'butt',
+				priceCup: 2,
+				pricePot: 4,
+				priceOz: 2,
+				description: 'Oolong I think',
+				category: 'oolong',
+				available: true,
+				key: 2
+			},
+
+			{
+				name: 'vivian',
+				priceCup: 2,
+				pricePot: 4,
+				priceOz: 2,
+				description: 'tasty,  ipsum loremm foo goo',
+				category: 'green',
+				available: true,
+				key: 3
+			},
+
+			{
+				name: 'clover',
+				priceCup: 1,
+				pricePot: 2,
+				priceOz: 1,
+				description: 'green tea with seasame taste',
+				category: 'green',
+				available: true,
+				key: 4
+			},
+
+			{
+				name: 'donna',
+				priceCup: 1,
+				pricePot: 2,
+				priceOz: 1,
+				description: 'green tea with seasame taste',
+				category: 'green',
+				available: true,
+				key: 5
+			}
+		]
+		});
+	}
+
+	checkClickHandler = (event)=> {
+		console.log(event.target.checked);
+		let checked = [...this.state.checked];
+
+		if (event.target.checked && checked.indexOf(event.target.id) === -1) {
+			// if (checked.indexOf(event.target.id) === -1)  {
+				checked.push(event.target.id);
+			}
+		 else {
+		 	console.log('Else');
+		 	console.log(checked.indexOf(event.target.id));
+			checked.splice(checked.indexOf(event.target.id), 1);
+		}
+
+		
+		console.log(checked);
+		this.setState({checked: checked})
+		// console.log
 	}
 
 	render() {
@@ -65,6 +171,7 @@ class BurgerBuilder extends Component {
 			<div className={classes.Menu}>
 			<Checkbox 
 			teas={catArray}
+			checkClick={this.checkClickHandler}
 			/>
 				
 			</div>
@@ -74,6 +181,7 @@ class BurgerBuilder extends Component {
 				return	<Category 
 						teas={this.state.teas}
 						category={category}
+						key={(Math.random() * 1000000) + 1 }
 						>
 						</Category>
 				})}
