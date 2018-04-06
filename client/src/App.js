@@ -18,7 +18,6 @@ class App extends Component {
           		path="/menu"          		
           		component={Menu}
           		/>
-
           		
           		<Route
           		path='/admin'

@@ -162,6 +162,19 @@ class BurgerBuilder extends Component {
 			
 		}
 
+		let test = <div>
+				{catArray.map(category => {
+					if (this.state.checked.indexOf(category) !== -1) {
+						return	<Category 
+						teas={this.state.teas}
+						category={category}
+						key={(Math.random() * 1000000) + 1 }
+						>
+						</Category>
+					}
+				
+				})}
+			</div>
 
 		return (
 		<Aux>
@@ -176,16 +189,7 @@ class BurgerBuilder extends Component {
 				
 			</div>
 
-			<div>
-				{catArray.map(category => {
-				return	<Category 
-						teas={this.state.teas}
-						category={category}
-						key={(Math.random() * 1000000) + 1 }
-						>
-						</Category>
-				})}
-			</div>
+			{test}
 		</Aux>
 		)
 	}
