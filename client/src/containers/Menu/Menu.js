@@ -69,75 +69,15 @@ class BurgerBuilder extends Component {
 		]
 	}
 
-	testFunction = ()=> {
-		console.log
-		this.setState({
-			teas:  [
-			{
-				name: 'earl',
-				priceCup: 1,
-				pricePot: 2,
-				priceOz: 1,
-				description: 'green tea with seasame taste',
-				category: 'green',
-				available: true,
-				key: 1
-			},
-
-			{
-				name: 'butt',
-				priceCup: 2,
-				pricePot: 4,
-				priceOz: 2,
-				description: 'Oolong I think',
-				category: 'oolong',
-				available: true,
-				key: 2
-			},
-
-			{
-				name: 'vivian',
-				priceCup: 2,
-				pricePot: 4,
-				priceOz: 2,
-				description: 'tasty,  ipsum loremm foo goo',
-				category: 'green',
-				available: true,
-				key: 3
-			},
-
-			{
-				name: 'clover',
-				priceCup: 1,
-				pricePot: 2,
-				priceOz: 1,
-				description: 'green tea with seasame taste',
-				category: 'green',
-				available: true,
-				key: 4
-			},
-
-			{
-				name: 'donna',
-				priceCup: 1,
-				pricePot: 2,
-				priceOz: 1,
-				description: 'green tea with seasame taste',
-				category: 'green',
-				available: true,
-				key: 5
-			}
-		]
-		});
-	}
 
 	checkClickHandler = (event)=> {
-		console.log(event.target.checked);
+		console.log(event.target.id);
 		let checked = [...this.state.checked];
 
-		if (event.target.checked && checked.indexOf(event.target.id) === -1) {
+		if (checked.indexOf(event.target.id) === -1) {
 			// if (checked.indexOf(event.target.id) === -1)  {
 				checked.push(event.target.id);
+				console.log('If');
 			}
 		 else {
 		 	console.log('Else');
@@ -164,14 +104,16 @@ class BurgerBuilder extends Component {
 
 		let test = <div>
 				{catArray.map(category => {
-					if (this.state.checked.indexOf(category) !== -1) {
+					
 						return	<Category 
 						teas={this.state.teas}
 						category={category}
 						key={(Math.random() * 1000000) + 1 }
+						checked={this.state.checked}
+						checkClick={this.checkClickHandler}
 						>
 						</Category>
-					}
+					
 				
 				})}
 			</div>

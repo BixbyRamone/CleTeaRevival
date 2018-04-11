@@ -2,12 +2,11 @@ import React, { Component } from 'react';
 
 import MenuItem from '../MenuItem/MenuItem';
 
-import Aux from '../../hoc/Auxiliary/Auxiliary';
+// import Aux from '../../hoc/Auxiliary/Auxiliary';
 
-class category extends Component {
-	state = {
-		teasToShow: []
-	}
+import classes from './Category.css';
+
+class Category extends Component {
 	
 	render() {
 		let teas2Show = [];
@@ -17,24 +16,56 @@ class category extends Component {
 			}
 		}
 
+		console.log(this.props.checked);
+		console.log(this.props.category);
+
+		let teasVis;
+		if (this.props.checked.indexOf(this.props.category) !== -1) {
+			teasVis = <div>
+					{teas2Show.map(tea => {
+						return <MenuItem 
+						teaInfo={tea}
+						key={tea.key}
+						/>
+					})}
+				</div>
+				console.log('HERE');
+				console.log(teasVis);
+		}
+
+		console.log(teasVis);
 
 		return(
-			<Aux>
-			<h3>{this.props.category}</h3>
+			<div id={this.props.category}
+			className={classes.Category}
+			onClick={this.props.checkClick}>
 
-			<div>
-				{teas2Show.map(tea => {
-					return <MenuItem 
-					teaInfo={tea}
-					key={tea.key}
-					/>
-				})}
+				<h3
+				id={this.props.category}
+				>{this.props.category}
+				</h3>
+
+				{teasVis}
+
 			</div>
-
-			</Aux>
 			)
 	}
 }
 
 
-export default category;
+export default Category;
+
+/*
+
+
+
+<div>
+					{teas2Show.map(tea => {
+						return <MenuItem 
+						teaInfo={tea}
+						key={tea.key}
+						/>
+					})}
+				</div>
+
+				*/
