@@ -7,6 +7,7 @@ import Layout from './components/Layout/Layout';
 import Menu from './containers/Menu/Menu';
 import HomePage from './containers/HomePage/HomePage';
 import AdminHome from './containers/AdminHome/AdminHome';
+import Calendar from './containers/Calendar/Calendar';
 
 class App extends Component {
   render() {
@@ -18,6 +19,11 @@ class App extends Component {
           		path="/menu"          		
           		component={Menu}
           		/>
+
+              <Route 
+              path='/calendar'
+              component={Calendar}
+              />
           		
           		<Route
           		path='/admin'

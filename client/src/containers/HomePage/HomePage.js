@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 
 import Aux from '../../hoc/Auxiliary/Auxiliary';
-import FrontPageTile from '../../components/FrontPageTile/FrontPageTile';
+import FrontPageTile from '../../components/FrontPageTile/FrontPageTile'; 
 
 import classes from './HomePage.css';
 

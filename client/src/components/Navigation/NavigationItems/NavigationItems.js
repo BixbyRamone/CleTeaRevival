@@ -14,7 +14,7 @@ const navigationItems = (props) => (
 
 			<NavLink to="/menu"><NavigationItem link="/menu">Menu / Shop</NavigationItem></NavLink>
 
-			<NavLink to="/"><NavigationItem link="/calendar">Calendar</NavigationItem></NavLink>
+			<NavLink to="/calendar"><NavigationItem link="/calendar">Calendar</NavigationItem></NavLink>
 
 			<NavLink to="/"><NavigationItem link="/about">Blog</NavigationItem></NavLink>		
 			
